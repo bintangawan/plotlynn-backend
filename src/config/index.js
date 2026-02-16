@@ -36,6 +36,13 @@ const config = {
     secret: process.env.SESSION_SECRET || 'fallback_session_secret',
   },
 
+  // Web Push (VAPID)
+  vapid: {
+    publicKey: process.env.VAPID_PUBLIC_KEY || '',
+    privateKey: process.env.VAPID_PRIVATE_KEY || '',
+    contact: process.env.VAPID_CONTACT || 'mailto:noreply@plotlynn.com',
+  },
+
   // Frontend
   clientUrl: process.env.CLIENT_URL || 'http://localhost:8000',
 };

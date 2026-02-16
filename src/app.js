@@ -61,22 +61,20 @@ app.get('/api/health', (req, res) => {
 // ============================
 // API Routes
 // ============================
-// Routes akan di-register di sini saat module dibuat
-// Contoh nanti:
-//   app.use('/api/auth', require('./modules/auth/auth.routes'));
-//   app.use('/api/users', require('./modules/users/user.routes'));
-//   app.use('/api/stories', require('./modules/stories/story.routes'));
-//   app.use('/api/chapters', require('./modules/chapters/chapter.routes'));
-//   app.use('/api/comments', require('./modules/comments/comment.routes'));
-//   app.use('/api/bookmarks', require('./modules/bookmarks/bookmark.routes'));
-//   app.use('/api/likes', require('./modules/likes/like.routes'));
-//   app.use('/api/followers', require('./modules/followers/follower.routes'));
-//   app.use('/api/genres', require('./modules/genres/genre.routes'));
-//   app.use('/api/tags', require('./modules/tags/tag.routes'));
-//   app.use('/api/reading-history', require('./modules/reading-history/readingHistory.routes'));
-//   app.use('/api/notifications', require('./modules/notifications/notification.routes'));
-//   app.use('/api/reports', require('./modules/reports/report.routes'));
-//   app.use('/api/admin', require('./modules/admin/admin.routes'));
+app.use('/api/auth', require('./modules/auth/auth.routes'));
+app.use('/api/users', require('./modules/users/user.routes'));
+app.use('/api/admin', require('./modules/admin/admin.routes'));
+app.use('/api/genres', require('./modules/genres/genre.routes'));
+app.use('/api/tags', require('./modules/tags/tag.routes'));
+app.use('/api/stories', require('./modules/stories/story.routes'));
+app.use('/api/stories/:storyId/chapters', require('./modules/chapters/chapter.routes'));
+app.use('/api/bookmarks', require('./modules/bookmarks/bookmark.routes'));
+app.use('/api/comments', require('./modules/comments/comment.routes'));
+app.use('/api/followers', require('./modules/followers/follower.routes'));
+app.use('/api/likes', require('./modules/likes/like.routes'));
+app.use('/api/notifications', require('./modules/notifications/notification.routes'));
+app.use('/api/reading-history', require('./modules/reading-history/readingHistory.routes'));
+app.use('/api/reports', require('./modules/reports/report.routes'));
 
 // ============================
 // Error Handling

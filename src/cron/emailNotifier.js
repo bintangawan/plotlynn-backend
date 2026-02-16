@@ -44,7 +44,7 @@ const sendEmail = async (transporter, to, subject, html) => {
     return;
   }
 
-  const from = process.env.SMTP_FROM || 'Plotlynn <noreply@plotlynn.com>';
+  const from = process.env.SMTP_FROM || 'Plotlynn <noreply@bintangawan0418.com>';
   await transporter.sendMail({ from, to, subject, html });
 };
 
